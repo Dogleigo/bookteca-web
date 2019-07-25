@@ -1,0 +1,32 @@
+{
+  "name": "bookteca",
+  "version": "1.0.0",
+  "description": "Uma biblioteca feita para hospedar livros gratuitos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dogleigo/bookteca-web.git"
+  },
+  "keywords": [
+    "livros",
+    "gratuitos",
+    "ler",
+    "onlibe",
+    "consulta",
+    "de",
+    "livros"
+  ],
+  "author": "Kaique Junior Silva de Abreu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dogleigo/bookteca-web/issues"
+  },
+  "homepage": "https://github.com/Dogleigo/bookteca-web#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  }
+}
