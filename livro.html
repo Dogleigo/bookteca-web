@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang=pt-br dir="ltr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Livro - Bookteca - Livros de qualidade que você não encontra na biblioteca.</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/ladda/dist/ladda-themeless.min.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#4682B4;">
+      <a class="navbar-brand" href="#">Bookteca</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="menu-drop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Cadastros
+
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item active" href="livro.html">Livros</a>
+                <a class="dropdown-item" href="#">Usuários</a>
+
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron">
+      <h3 class="display-4">Cadastre um novo livro</h3>
+      <p class="lead">
+        Cadastre um novo livro para que fique disponível para consulta e emprétimos.
+      </p>
+
+    </div>
+      <div class="container">
+        <form>
+          <div class="row justify-content-center">
+            <div class="col-sm-6 col-md-6">
+              <div class="input-group">
+                <input type="text" name="titulo" value="" class="form-control" placeholder="Titulo do livro"/>
+              </div>
+              <div class="input-group">
+                <input type="text" name="autor" value="" class="form-control mt-2" placeholder="Autor do livro"/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+            <div class="input-group">
+              <input type="text" name="idlivro" value="" class="form-control" placeholder="ID do livro"/>
+            </div>
+            <div class="input-group">
+              <input type="text" name="idlivro" value="" class="form-control mt-2" placeholder="Gênero do livro"/>
+            </div>
+            <div class="col-sm-6 col-md-12">
+            <div class="input-group m-1">
+              <textarea type="text" name="descricao" value="" class="form-control mt-2" placeholder="Descrição"></textarea>
+            </div>
+            </div>
+          </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-success mt-2" id="cadastrar">Cadastrar</button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </body>
+    <script type="text/javascript" src="node_modules/ladda/dist/spin.min.js">
+      </script>
+    <script type="text/javascript" src="node_modules/ladda/dist/ladda.min.js">
+      </script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js">
+      </script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js">
+      </script>
+    <script src="livro.js">
+      </script>
+</html>
