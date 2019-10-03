@@ -25,13 +25,13 @@ window.onload = () => {
         required:true,
         minlength:3
       },
+      subtitulo: {
+        required:true,
+        minlength:3
+      },
       autor: {
         required:true,
         minlength:10
-      },
-      idlivro: {
-        required:true,
-        minlength:3
       },
       genero: {
         required:true,
@@ -47,13 +47,13 @@ window.onload = () => {
         required:'O titulo é obrigatório.',
         minlength: 'O titulo é muito curto.'
       },
+      subtitulo: {
+        required:'O subtitulo é obrigatório.',
+        minlength: 'O subtitulo é muito curto.'
+      },
       autor: {
         required:'O autor do livro é obrigatório.',
         minlength: 'O nome do autor é muito curto'
-      },
-      idlivro: {
-        required: 'A Identificação única do livro é obrigatória',
-        minlength: 'A Identificação única do livro é muito curta'
       },
       genero: {
         required: 'O gênero do livro é obrigatório',
@@ -67,9 +67,22 @@ window.onload = () => {
     },
     errorPlacement:function(error, element) {
       console.log(error, element)
-      element.parent().parent().find('.error').append(error).addClass('animated shake')
+      element.parent().parent().find('.error').append(error).addClass('animated shake'  )
     },
-    errorClass: 'cor-do-erro'
+    errorClass: 'cor-do-erro',
+    submitHandler: function(form){
+      console.log(form)
+       let formSerializado = $(form).serialize()
+       console.log(formSerializado)
+
+       fetch("http://localhost:8080/bookteca-api/src/inserirlivro.php", {
+        method:"POST",
+        body:formSerializado,
+        headers: {
+          'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'
+        }
+      })
+    }
 })
 
 }
